@@ -102,11 +102,11 @@
       var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
       if(isChrome){
         setTimeout(function(){
-          $(".search-result").css({"margin": "100px 0px 0px 0px"});
+          $(".search-result").css({"margin": "100px 0px 0px 0px", "padding": "20px"});
         }, 1000);
       } else {
         setTimeout(function () {
-          $(".search-result").css({ "margin": "100px 0px 0px 0px"});
+          $(".search-result").css({ "margin": "100px 0px 0px 0px", "padding": "20px"});
         }, 1000);
       }
     });
