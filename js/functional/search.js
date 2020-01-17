@@ -37,10 +37,18 @@ function showResult(respData, searchKeywords) {
     // });
 
     if (respData.code == 200){
-        renderCharts(respData, searchKeywords);
+        if (respData.type !== undefined && respData.type == "sentence"){
+            displaySentence(respData.sentence);
+        } else {
+            renderCharts(respData, searchKeywords);
+        }
     } else {
         displayNoRecords(searchKeywords);
     }
+}
+
+function displaySentence(resultSentence) {
+    $("#viz-result").html("<p class='sentence'>'" + resultSentence + "'</p>");
 }
 
 function displayNoRecords(searchQuery){

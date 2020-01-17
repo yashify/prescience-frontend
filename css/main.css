@@ -1197,6 +1197,10 @@ legend {
   sans-serif;
 }
 
+.s010 #viz-result .sentence {
+  color: #FFF;
+}
+
 .s010 .search-result{
   padding: 20px;
   clear: both;
