@@ -1201,6 +1201,10 @@ legend {
   padding: "20px";
 }
 
+.s010 .search-margin {
+  padding: "100px 0px 0px 0px";
+}
+
 .s010 #viz-result .sentence {
   color: #FFF;
 }
