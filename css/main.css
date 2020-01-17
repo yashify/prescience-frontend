@@ -826,7 +826,7 @@ legend {
 .s010 form {
   width: 100%;
   max-width: 790px;
-  margin: 0;
+  /* margin: 0; */
 }
 
 .s010 form .inner-form {
@@ -1166,6 +1166,7 @@ legend {
 .s010 form {
   /* margin-top: 250px !important; */
   max-width: 550px;
+  margin: 0 auto;
 }
 
 /* .s010 form .inner-form .basic-search {
@@ -1197,23 +1198,25 @@ legend {
   sans-serif;
 }
 
-.s010 .chrome-padding {
+/* .s010 .chrome-padding {
   padding: "20px";
 }
 
 .s010 .search-margin {
-  padding: "100px 0px 0px 0px";
-}
+  margin: "100px 0px 0px 0px !important";
+} */
 
 .s010 #viz-result .sentence {
   color: #FFF;
 }
 
 .s010 .search-result{
-  padding: 20px;
-  clear: both;
-  position: absolute;
-  /* margin: 100px; */
+  padding: 50px 0 !important;
+  /* clear: both; */
+  /* position: absolute; */
+  margin: 0px auto;
+  width: 100%;
+  max-width: 700px;
 }
 
 .s010 .tag-line{
@@ -1267,6 +1270,10 @@ ul#tagList li .result-head {
   left: 0;  
 }
 
+.s010 .s010-container {
+  min-width: 1000px;
+}
+
 /* Cool infinite background scrolling animation.
  * Twitter: @kootoopas
  */
@@ -1279,6 +1286,71 @@ ul#tagList li .result-head {
   font-weight: 100;
   font-style: normal;
 } */
+
+/* Animation */
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* Variables */
+/* Loading Icon */
+.loading {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.loading__ring {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.loading__ring:first-child {
+  -webkit-transform: skew(30deg, 20deg);
+  transform: skew(30deg, 20deg);
+}
+
+.loading__ring:last-child {
+  -webkit-transform: skew(-30deg, -20deg) scale(-1, 1);
+  transform: skew(-30deg, -20deg) scale(-1, 1);
+}
+
+.loading__ring:last-child svg {
+  -webkit-animation-delay: -0.5s;
+  animation-delay: -0.5s;
+}
+
+.loading__ring svg {
+  -webkit-animation: rotate 1s linear infinite;
+  animation: rotate 1s linear infinite;
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.loader-icon {
+  margin: 0 auto;
+  width: 100px;
+  display: none;
+  /* align-content: center; */
+}
+
+#first-loader-path{
+  fill: #e62c2c;
+}
+
+#second-loader-path {
+  fill: #3B7EFF;
+}
 
 /* Added by Yash */
 

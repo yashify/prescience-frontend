@@ -10,12 +10,20 @@ function searchDashboard(highChartJson, dataType) {
         contentType: "application/json",
         dataType: 'json',
         data: JSON.stringify(searchData),
+        beforeSend: function () {
+            // setting a timeout
+            $("#viz-result").html("");
+            $(".loader-icon").show();
+        },
         success: function (response, responseStatus, xhr) {
             showResult(response, searchData.text);
             // $('body').append(response);
         },
         error: function (xhr, responseStatus, errorThrown) {
             console.log('Error in Operation', responseStatus);
+        },
+        complete: function () {
+            $(".loader-icon").hide();
         }
     });
 }
